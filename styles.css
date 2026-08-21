@@ -1,0 +1,25 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff;color:#14161a;font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:#2458E6;text-decoration:none}
+a:hover{color:#1740b8}
+ul{margin:0;padding:0;list-style:none}
+
+@keyframes gwa-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* hover utility classes (used across the landing page in place of the design prototype's style-hover attribute) */
+.hov-dark:hover{color:#14161a}
+.hov-blue-text:hover{color:#1740b8}
+.hov-primary:hover{background:#1740b8;color:#ffffff}
+.hov-primary-bg:hover{background:#1740b8}
+.hov-bg-light:hover{background:#fafbfd}
+.hov-border-dark:hover{border-color:#14161a;color:#14161a}
+.hov-white-navy:hover{background:#dfe8f8;color:#0E1F3D}
+.hov-black:hover{background:#000000;color:#ffffff}
+.hov-quiz-option:hover{border-color:#2458E6;background:#F6F8FB}
+.hov-quiz-toggle:hover{background:#2458E6;color:#ffffff}
+.marquee-track-wrap:hover .marquee-track{animation-play-state:paused}
+
+input:focus,textarea:focus{border-color:#2458E6;outline:none}
+
+#gwa-nav{transition:transform .28s ease,opacity .28s ease;will-change:transform}
