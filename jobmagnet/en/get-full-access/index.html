@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Full Access to Job Magnet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#0D0F12;}
+  a{color:#8EC5FF;text-decoration:none;}
+  a:hover{color:#4D8DFF;}
+</style>
+</head>
+<body>
+
+<div style="background:#0D0F12;min-height:100vh;display:flex;justify-content:center;font-family:'Inter',sans-serif;">
+<div style="width:100%;max-width:480px;background:#0D0F12;position:relative;padding:40px 20px 60px;">
+
+  <h1 style="margin: 0 0 24px; font-family: 'Archivo Black',sans-serif; font-size: 30px; line-height: 1.15; color: #F7F8FA; text-transform: uppercase; text-align: center;">Get access to<br>JOB MAGNET</h1>
+
+  <div style="background:#1B1F26;border-radius:22px;padding:26px;margin-bottom:26px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px;">
+      <div style="display:flex;align-items:baseline;gap:10px;">
+        <span style="font-family:'Archivo Black',sans-serif;font-size:40px;color:#4D8DFF;">$19.99</span>
+        <span style="color:#A7AFBA;font-size:16px;text-decoration:line-through;">$69</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="background:#F7F8FA;border-radius:6px;padding:5px 9px;display:flex;align-items:center;">
+          <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:12px;letter-spacing:-0.02em;color:#1A1F71;">VISA</span>
+        </div>
+        <div style="background:#F7F8FA;border-radius:6px;padding:5px 8px;display:flex;align-items:center;gap:2px;">
+          <span style="width:13px;height:13px;border-radius:50%;background:#EB001B;"></span>
+          <span style="width:13px;height:13px;border-radius:50%;background:#F79E1B;margin-left:-6px;"></span>
+        </div>
+      </div>
+    </div>
+    <p style="margin:0 0 20px;color:#A7AFBA;font-size:12px;">≈ 52 GEL</p>
+    <button id="proceed-btn" style="width:100%;display:flex;align-items:center;justify-content:center;background:rgba(77,141,255,0.3);color:rgba(13,15,18,0.5);font-weight:800;font-size:16px;text-transform:uppercase;border:none;border-radius:14px;padding:17px 0;cursor:not-allowed;">Proceed to payment</button>
+    <p style="margin:14px 0 4px;color:#A7AFBA;font-size:12.5px;text-align:center;">Secure checkout via Flitt</p>
+    <p style="margin:0 0 18px;text-align:center;"><a href="https://instagram.com/grow.withangie" style="font-size:12.5px;color:#8EC5FF;">Follow @grow.withangie for more tips</a></p>
+
+    <label style="display:block;margin-bottom:12px;">
+      <span style="display:block;margin-bottom:6px;color:#A7AFBA;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">Email</span>
+      <input id="email-input" type="email" placeholder="you@email.com" style="width:100%;box-sizing:border-box;background:#0D0F12;border:1px solid rgba(255,255,255,0.14);border-radius:10px;padding:12px 14px;color:#F7F8FA;font-size:14px;">
+    </label>
+    <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;">
+      <input id="agree-input" type="checkbox" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#4D8DFF;">
+      <span style="color:#A7AFBA;font-size:12.5px;line-height:1.5;">I agree to the <a href="https://growwithangie.co/terms-and-conditions.html">Terms of Use</a> and <a href="https://growwithangie.co/refund-policy.html">Refund Policy</a> and request immediate access to the digital content.</span>
+    </label>
+    <p id="form-error" hidden style="margin:10px 0 0;color:#FF9B9B;font-size:12.5px;">Please enter your email and accept the terms to continue.</p>
+  </div>
+
+  <footer style="margin-top:36px;border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;">
+    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px;">
+      <a href="https://growwithangie.co/privacy-policy.html" style="font-size:12.5px;color:#A7AFBA;">Privacy Policy</a>
+      <a href="https://growwithangie.co/terms-and-conditions.html" style="font-size:12.5px;color:#A7AFBA;">Terms &amp; Conditions</a>
+      <a href="https://growwithangie.co/refund-policy.html" style="font-size:12.5px;color:#A7AFBA;">Refund Policy</a>
+      <a href="https://growwithangie.co/confidentiality-policy.html" style="font-size:12.5px;color:#A7AFBA;">Confidentiality Policy</a>
+    </div>
+    <a href="https://instagram.com/grow.withangie" style="font-size:12.5px;color:#8EC5FF;">Instagram ↗</a>
+    <p style="margin:14px 0 0;color:#5C6470;font-size:12px;">© 2026 Grow With Angie</p>
+  </footer>
+
+</div>
+</div>
+
+<script>
+  var emailInput = document.getElementById('email-input');
+  var agreeInput = document.getElementById('agree-input');
+  var proceedBtn = document.getElementById('proceed-btn');
+  var formError = document.getElementById('form-error');
+
+  function isEmailValid() {
+    return /\S+@\S+\.\S+/.test(emailInput.value);
+  }
+  function refreshButtonState() {
+    var ok = agreeInput.checked && isEmailValid();
+    proceedBtn.style.background = ok ? '#4D8DFF' : 'rgba(77,141,255,0.3)';
+    proceedBtn.style.color = ok ? '#0D0F12' : 'rgba(13,15,18,0.5)';
+    proceedBtn.style.cursor = ok ? 'pointer' : 'not-allowed';
+  }
+  emailInput.addEventListener('input', refreshButtonState);
+  agreeInput.addEventListener('change', refreshButtonState);
+
+  // Apps Script web app bound to the leads spreadsheet — see google-apps-script.gs
+  var SHEET_ENDPOINT = 'PASTE_APPS_SCRIPT_URL_HERE';
+  function submitToSheet(email) {
+    if (SHEET_ENDPOINT.indexOf('PASTE_') === 0) return;
+    fetch(SHEET_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new URLSearchParams({ formType: 'checkout_email', page: 'get-full-access', lang: 'en', email: email, agreed: 'yes' }),
+    });
+  }
+
+  proceedBtn.addEventListener('click', function () {
+    if (!isEmailValid() || !agreeInput.checked) {
+      formError.hidden = false;
+      return;
+    }
+    formError.hidden = true;
+    submitToSheet(emailInput.value);
+    window.location.href = 'https://pay.flitt.com/s/LZoR';
+  });
+</script>
+
+</body>
+</html>
