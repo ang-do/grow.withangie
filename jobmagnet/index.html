@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Magnet</title>
+<meta http-equiv="refresh" content="0; url=./ua/">
+<script>
+  var lang = (navigator.language || 'uk').toLowerCase().indexOf('uk') === 0 ? 'ua' : 'ua';
+  // Default audience is Ukrainian; only switch to English for explicit English browsers.
+  if ((navigator.language || '').toLowerCase().indexOf('en') === 0) lang = 'en';
+  location.replace('./' + lang + '/');
+</script>
+</head>
+<body style="background:#0D0F12;"></body>
+</html>
